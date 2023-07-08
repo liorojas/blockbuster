@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @client %>
+<% @client.movies.each do |m|%>
+<h5>Películas en arriendo</h5>
+<p><%= m.name%></p>
+<%end%>
+<div>
+  <%= link_to "Edit this client", edit_client_path(@client) %> |
+  <%= link_to "Back to clients", clients_path %>
+
+  <%= button_to "Destroy this client", @client, method: :delete %>
+</div>

@@ -1,0 +1,27 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Movies</h1>
+
+
+
+
+
+
+<div id="movies" class=" d-flex row justify-content-center" >
+  <% @movies.each do |movie| %>
+
+
+  <div class="card col-3">
+  <div class="card-body">
+    <h5 class="card-title"><%= render movie %></h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary"><%= render movie.client%></h6>
+    <%= link_to "Show this movie", movie %>
+    <%= link_to "New movie", new_movie_path %>
+  </div>
+</div>
+  <% end %>
+</div>
+
+
+
+
